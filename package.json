@@ -1,0 +1,41 @@
+{
+  "name": "graphics",
+  "version": "1.0.0",
+  "description": "NikePro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DKMFzF/graphics.git\u001b[.git"
+  },
+  "author": "DKMFzF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DKMFzF/graphics.git\u001b[/issues"
+  },
+  "homepage": "https://github.com/DKMFzF/graphics.git\u001b[#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.2",
+    "cssnano": "^7.0.6",
+    "del": "^6.0.0",
+    "gulp": "^5.0.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.47",
+    "postcss-combine-media-query": "^1.0.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.79.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard-scss": "^13.1.0"
+  },
+  "browserslist": [
+    "last 5 versions"
+  ]
+}
