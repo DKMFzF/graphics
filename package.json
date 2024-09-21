@@ -14,7 +14,7 @@
     "build": "gulp build",
     "fixAndBuild": "npm run fixAll && npm run build",
     "dev": "gulp",
-    "commit": "git add . && git commit -m add-config-file && git push"
+    "commit": "git add . && git commit -m add-config-file"
   },
   "repository": {
     "type": "git",
