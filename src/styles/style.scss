@@ -18,7 +18,6 @@
     content: $content;
     display: block;
     color: white;
-    // font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
     font-size: clamp(0.5rem, -0.0163rem + 2.2029vw, 2.875rem);
     inset-block-start: $inset-block-start;
     inset-inline-start: $inset-inline-start;
@@ -26,7 +25,7 @@
 
 .page {
     @include default-setting-container;
-    margin-block: 5%;
+    margin-block-end: 5%;
 
     .title {
         margin-block-start: 5%;
@@ -64,6 +63,8 @@
         }
     }
 }
+
+// Статистика для основных вопросов
 
 .graphic-first-question {
     @include background-gradient(55.1%);
@@ -113,14 +114,52 @@
     }
 }
 
-.not-and-not {
-    @include background-gradient(64.8%);
+// Подробная статистика
+
+.da-and-da {
+    @include background-gradient(64.7%);
 
     &.hero-container__graphic::before {
-        @include stastictics-font('35,2%', 35%, 11%);
+        @include stastictics-font('35,3%', 35%, 11%);
     }
 
     &.hero-container__graphic::after {
-        @include stastictics-font('64,8', 59%, 60%);
+        @include stastictics-font('64,7', 59%, 60%);
+    }
+}
+
+.net-and-net {
+    @include background-gradient(58.3%);
+
+    &.hero-container__graphic::before {
+        @include stastictics-font('41,7%', 35%, 11%);
+    }
+
+    &.hero-container__graphic::after {
+        @include stastictics-font('58,3%', 59%, 60%);
+    }
+}
+
+.da-and-net {
+    @include background-gradient(90.6%);
+
+    &.hero-container__graphic::before {
+        @include stastictics-font('9,6%', 6%, 26.5%);
+    }
+
+    &.hero-container__graphic::after {
+        @include stastictics-font('90,6%', 68%, 43%);
+    }
+}
+
+.net-and-da {
+    @include background-gradient(86.8%);
+
+    &.hero-container__graphic::before {
+        @include stastictics-font('13,2%', 10%, 20%);
+    }
+
+    &.hero-container__graphic::after {
+        @include stastictics-font('86,8%', 68%, 43%);
     }
 }
