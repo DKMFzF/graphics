@@ -105,7 +105,7 @@ function watchFiles() {
   gulp.watch(['src/**/*.pug'], pug);
   gulp.watch(['src/**/*.html'], html);
   gulp.watch(['src/**/*.css'], css);
-  gulp.watch(['src/layouts/**/*.scss'], scss);
+  gulp.watch(['src/**/*.scss'], scss);
   // gulp.watch(['src/pages/**/*.scss'], pagesScss);
   // gulp.watch(['src/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
 }
