@@ -82,7 +82,7 @@
     @include background-gradient(50.6%);
     
     &.hero-container__graphic::before {
-        @include stastictics-font('49.6%', 44%, 10%);
+        @include stastictics-font('49.4%', 44%, 10%);
     }
 
     &.hero-container__graphic::after {
@@ -144,7 +144,7 @@
     @include background-gradient(90.6%);
 
     &.hero-container__graphic::before {
-        @include stastictics-font('9,6%', 6%, 26.5%);
+        @include stastictics-font('9,4%', 6%, 26.5%);
     }
 
     &.hero-container__graphic::after {
