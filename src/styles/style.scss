@@ -1,18 +1,52 @@
-.page {
+@mixin default-setting-container {
     display: flex;
-    min-width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+@mixin background-gradient($point) {
+    box-shadow: 0 0 0 3px rgb(58, 58, 58);
+    background: conic-gradient(
+        #FF6961 0% $point,
+        #8BD3E6  $point 100%
+    );
+}
+
+@mixin stastictics-font($content, $inset-block-start, $inset-inline-start) {
+    position: absolute;
+    content: $content;
+    display: block;
+    color: white;
+    // font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
+    font-size: clamp(0.5rem, -0.0163rem + 2.2029vw, 2.875rem);
+    inset-block-start: $inset-block-start;
+    inset-inline-start: $inset-inline-start;
+}
+
+.page {
+    @include default-setting-container;
+    margin-block: 5%;
+
+    .title {
+        margin-block-start: 5%;
+        margin-block-end: 3%;
+        margin-inline: 5%;
+        text-align: center;
+        font-size: clamp(1.25rem, 0.5707rem + 2.8986vw, 4.375rem);
+    }
 
     .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include default-setting-container;
         align-items: center;
         gap: 50px;
         
         .hero-container {
+            border: 3px solid black;
+            box-shadow: 15px 15px 0 0 rgb(58, 58, 58);
+            padding-block: 20px;
+            padding-inline: 20px;
+            border-radius: 20px;
             inline-size: 50%;
             display: flex;
             flex-direction: column;
@@ -32,111 +66,61 @@
 }
 
 .graphic-first-question {
-    background: conic-gradient(
-        #FF6961 0% 55.1%,
-        #8BD3E6  55.1% 100%
-    );
+    @include background-gradient(55.1%);
 
     &.hero-container__graphic::before {
-        position: absolute;
-        content: '44.9%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 42%;
-        inset-inline-start: 10%;
+        @include stastictics-font('44.9%', 42%, 10%);
     }
 
     &.hero-container__graphic::after {
-        position: absolute;
-        content: '55.1%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 53%;
-        inset-inline-start: 57%;
+        @include stastictics-font('55.1%', 53%, 57%);
     }
 }
 
-
-
 .graphic-second-question {
-    background: conic-gradient(
-        #FF6961 0% 50.6%,
-        #8BD3E6  49.4% 100%
-    );
-
+    @include background-gradient(50.6%);
+    
     &.hero-container__graphic::before {
-        position: absolute;
-        content: '49.6%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 44%;
-        inset-inline-start: 10%;
+        @include stastictics-font('49.6%', 44%, 10%);
     }
 
     &.hero-container__graphic::after {
-        position: absolute;
-        content: '50.6%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 44%;
-        inset-inline-start: 57%;
+        @include stastictics-font('50.6%', 44%, 57%);
     }
 }
 
 .graphic-third-question {
-    background: conic-gradient(
-        #FF6961 0% 41.4%,
-        #8BD3E6  41.4% 100%
-    );
+    @include background-gradient(41.4%);
 
     &.hero-container__graphic::before {
-        position: absolute;
-        content: '58.6%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 54%;
-        inset-inline-start: 12%;
+        @include stastictics-font('58.6%', 52%, 12%);
     }
 
     &.hero-container__graphic::after {
-        position: absolute;
-        content: '41.4%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 37%;
-        inset-inline-start: 60%;
+        @include stastictics-font('41.4%', 37%, 60%);
     }
 }
 
 .graphic-fourth-question {
-    background: conic-gradient(
-        #FF6961 0% 64.8%,
-        #8BD3E6  64.8% 100%
-    );
+    @include background-gradient(64.8%);
 
     &.hero-container__graphic::before {
-        position: absolute;
-        content: '35,2%';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 35%;
-        inset-inline-start: 11%;
+        @include stastictics-font('35,2%', 35%, 11%);
     }
 
     &.hero-container__graphic::after {
-        position: absolute;
-        content: '64,8';
-        display: block;
-        color: white;
-        font-size: clamp(0.5rem, -0.5156rem + 3.25vw, 3.75rem);
-        inset-block-start: 59%;
-        inset-inline-start: 60%;
+        @include stastictics-font('64,8', 59%, 60%);
+    }
+}
+
+.not-and-not {
+    @include background-gradient(64.8%);
+
+    &.hero-container__graphic::before {
+        @include stastictics-font('35,2%', 35%, 11%);
+    }
+
+    &.hero-container__graphic::after {
+        @include stastictics-font('64,8', 59%, 60%);
     }
 }

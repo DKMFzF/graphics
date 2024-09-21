@@ -3,9 +3,13 @@ html(lang="ru")
     head
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="color-scheme" content="light dark")
         title Graphics
         link(rel="stylesheet", href="/bundle.css")
     body.page
+        h1.title
+            | Основная статистика
+        
         section.hero
             div.hero-container
                 | Чувствуешь ли ты нехватку студенческих 
@@ -27,3 +31,12 @@ html(lang="ru")
                 | хотел/ла  бы реализовать в сотрудничестве с другими 
                 | людьми? (Для портфолио или для более масштабных целей)
                 div.hero-container__graphic.graphic-fourth-question
+        
+        h2.title
+                | Подробная статистика по первым двум вопросам
+                
+        section.hero
+            div.hero-container
+                | Процент людей которые ответили нет на вопрос
+                | 1 и 2
+                div.hero-container__graphic.not-and-not
