@@ -67,26 +67,26 @@
 // Статистика для основных вопросов
 
 .graphic-first-question {
-    @include background-gradient(55.1%);
+    @include background-gradient(55.2%);
 
     &.hero-container__graphic::before {
-        @include stastictics-font('44.9%', 42%, 10%);
+        @include stastictics-font('44.8%', 42%, 10%);
     }
 
     &.hero-container__graphic::after {
-        @include stastictics-font('55.1%', 53%, 57%);
+        @include stastictics-font('55.2%', 53%, 57%);
     }
 }
 
 .graphic-second-question {
-    @include background-gradient(50.6%);
+    @include background-gradient(50.2%);
     
     &.hero-container__graphic::before {
-        @include stastictics-font('49.4%', 44%, 10%);
+        @include stastictics-font('49.8%', 44%, 10%);
     }
 
     &.hero-container__graphic::after {
-        @include stastictics-font('50.6%', 44%, 57%);
+        @include stastictics-font('50.2%', 44%, 57%);
     }
 }
 
@@ -103,14 +103,14 @@
 }
 
 .graphic-fourth-question {
-    @include background-gradient(64.8%);
+    @include background-gradient(65.4%);
 
     &.hero-container__graphic::before {
-        @include stastictics-font('35,2%', 35%, 11%);
+        @include stastictics-font('34,6%', 35%, 11%);
     }
 
     &.hero-container__graphic::after {
-        @include stastictics-font('64,8', 59%, 60%);
+        @include stastictics-font('65.4', 59%, 60%);
     }
 }
 
