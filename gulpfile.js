@@ -91,6 +91,12 @@ function css() {
         .pipe(browserSync.reload({stream: true}));
 }
 
+function scrips() {
+  return gulp.src('src/**/*.js')
+          .pipe(gulp.dest('dist/'))
+          .pipe(browserSync.reload({stream: true}));
+}
+
 // function images() {
 //   return gulp.src('src/**/*.{jpg,png,svg,gif,ico,webp,avif}')
 //     .pipe(gulp.dest('dist/images'))
@@ -106,11 +112,12 @@ function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
   gulp.watch(['src/**/*.css'], css);
   gulp.watch(['src/**/*.scss'], scss);
+  gulp.watch(['src/**/*.js'], scrips);
   // gulp.watch(['src/pages/**/*.scss'], pagesScss);
   // gulp.watch(['src/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(pug, scss));
+const build = gulp.series(clean, gulp.parallel(pug, scss, scrips));
 const watchapp = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
@@ -120,6 +127,7 @@ exports.scss = scss;
 // exports.pagesScss = pagesScss;
 // exports.images = images;
 exports.clean = clean;
+exports.scrips = scrips;
 
 exports.build = build;
 exports.watchapp = watchapp;
