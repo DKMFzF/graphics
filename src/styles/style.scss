@@ -169,3 +169,10 @@
         @include stastictics-font('86,8%', 68%, 43%);
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+}
